@@ -544,7 +544,9 @@
     font-size: 15px; font-weight: 500; cursor: pointer;
     font-family: var(--font-body); transition: all 0.2s;
   }
-  .btn-nl:hover { background: var(--amber); box-shadow: 0 0 16px rgba(255,140,0,0.4); }
+  .btn-nl { width: 100%; background: var(--blood); color: white; border: none; padding: 14px; border-radius: var(--radius-sm); font-size: 15px; font-weight: 600; cursor: pointer; font-family: var(--font-body); transition: all 0.2s; }
+  .btn-nl:hover { background: var(--crimson); box-shadow: 0 0 24px rgba(241, 20, 64, 0.5); }
+
   .nl-success { display: none; color: #4ade80; font-size: 14px; text-align: center; padding: 8px; }
   .contact-info-row { display: flex; flex-direction: column; gap: 10px; margin-top: 1.5rem; }
   .contact-info-item { display: flex; align-items: center; gap: 10px; color: var(--text-muted); font-size: 14px; }
@@ -1263,17 +1265,30 @@
       </div>
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="testi-text">"Service client impeccable. Le document HTML & CSS est très bien structuré, mon projet de fin d'étude est passé haut les mains."</p>
-        <div class="testi-author"><div class="avatar">FD</div><div><div class="author-name">Fatou Diallo</div><div class="author-loc">Lomé, Togo</div></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
         <p class="testi-text">"J'ai commandé le cours Java + le cours Cybersécurité. Livraison WhatsApp en 5 minutes. Je recommande à tous les étudiants !"</p>
         <div class="testi-author"><div class="avatar">TK</div><div><div class="author-name">Théodore Kpakpo</div><div class="author-loc">Parakou, Bénin</div></div></div>
       </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"Le document JavaScript ES6+ est parfait. Les explications sont claires et le projet application météo m'a vraiment aidé à comprendre les APIs."</div>
+        <div class="texti-author"><div class="avatar">KA</div><div><div class="author-name">Kofi A.</div><div class="author-role">Étudiant IUT, Abomey-Calavi</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"Excellent rapport qualité-prix ! Le cours de Cybersécurité est très complet avec des cas réels. J'ai appris à sécuriser mes applications en quelques semaines."</div>
+        <div class="testi-author"><div class="avatar">BM</div><div><div class="author-name">Brice M.</div><div class="author-role">Technicien Réseau, Porto-Novo</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"Le document Java OOP avec exercices corrigés était exactement ce qu'il me fallait pour préparer mes examens. J'ai eu une excellente note grâce à Nexiabook !"</div>
+        <div class="testi-author"><div class="avatar">SN</div><div><div class="author-name">Séraphine N.</div><div class="author-role">Étudiante en Licence, Cotonou</div></div></div>
+      </div>
     </div>
+    
   </div>
 </section>
+
+<div class="divider"></div>
 
 <!-- ── CONTACT ── -->
 <section class="contact-section" id="contact">
@@ -1285,21 +1300,13 @@
         <p>🚨 En cas d'urgence, appelez directement l'un de nos numéros ci-dessous</p>
       </div>
       <div class="phone-list">
-        <a class="phone-item" href="tel:+2290196179694">
-          <div class="phone-icon">📞</div>
-          <div><div class="phone-number">+229 01 96 17 96 94</div><div class="phone-label">Ligne principale</div></div>
-        </a>
         <a class="phone-item" href="tel:+2290148250186">
           <div class="phone-icon">📞</div>
           <div><div class="phone-number">+229 01 48 25 01 86</div><div class="phone-label">Service commercial & Appel</div></div>
         </a>
-        <a class="phone-item" href="tel:+2290164061336">
-          <div class="phone-icon">📞</div>
-          <div><div class="phone-number">+229 01 98 21 44 97</div><div class="phone-label">Support & Appel</div></div>
-        </a>
         <a class="phone-item" href="tel:+2290198214497">
           <div class="phone-icon">📞</div>
-          <div><div class="phone-number">+229 01 64 06 13 36</div><div class="phone-label">WhatsApp</div></div>
+          <div><div class="phone-number">+229 01 98 21 44 97</div><div class="phone-label">WhatsApp</div></div>
         </a>
       </div>
       <div class="contact-info-row">
@@ -1315,7 +1322,7 @@
         <input class="nl-input" type="email" placeholder="Votre adresse email" id="nl-email"/>
         <input class="nl-input" type="tel" placeholder="Votre numéro de téléphone" id="nl-phone"/>
         <textarea class="nl-input" rows="3" placeholder="Votre message ou commande..." id="nl-msg" style="resize:vertical"></textarea>
-        <button class="btn-nl" onclick="sendMessage()">Envoyer le message</button>
+        <button class="btn-nl" onclick="sendMessage()">Envoyez</button>
         <p class="nl-success" id="nl-success">✅ Message reçu ! Nous vous rappelons très bientôt.</p>
       </div>
     </div>
@@ -1370,27 +1377,26 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:+2290196179694">+229 01 96 17 96 94</a></li>
           <li><a href="tel:+2290148250186">+229 01 48 25 01 86</a></li>
           <li><a href="tel:+2290164061336">+229 01 98 21 44 97</a></li>
-          <li><a href="tel:+2290198214497">+229 01 64 06 13 36</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">© 2026 Nexiabook. Tous droits réservés. Cotonou, Bénin.</span>
+      <span class="footer-copy">© 2026 Nexiabook. Tous droits réservés. Parakou, Bénin.</span>
       <div class="social-links">
-        <button class="social-btn">f</button>
-        <button class="social-btn">in</button>
-        <button class="social-btn">𝕏</button>
-        <button class="social-btn">▶</button>
+
+        <a href="https://www.facebook.com/profile.php?id=61573372274265" target="_blank" class="social-btn"><i class="fab fa-facebook"></i>f</a><br>
+        <a href="https://www.linkedin.com/in/nexia-book-4481b9403" target="_blank" class="social-btn"><i class="fab fa-linkedIn">in</i></a><br>
+        <a href="https://wa.we/2290198214497" target="_blank" class="social-btn"> <i class="fab fa-whatsapp"></i>wa</a>
       </div>
     </div>
   </div>
 </footer>
 
 <!-- ── FLOATING WHATSAPP ── -->
-<a class="whatsapp-float" href="https://wa.me/2290164061336" target="_blank" title="Contactez-nous sur WhatsApp">💬</a>
+<a class="whatsapp-float" href="https://wa.me/2290198214497" target="_blank" title="Contactez-nous sur WhatsApp">💬</a>
+
 
 <script>
   const products = [
